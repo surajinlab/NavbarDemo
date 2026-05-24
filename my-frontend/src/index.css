@@ -1,45 +1,106 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
-body {
-  background: #f4f4f4;
+body{
+  font-family: 'Poppins', sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
 }
 
-.navbar {
-  background: #2563eb;
-  color: white;
+/* ================= NAVBAR ================= */
+
+.navbar{
+  width: 100%;
+  padding: 18px 50px;
+
   display: flex;
   justify-content: space-between;
-  padding: 18px 40px;
   align-items: center;
+
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+
+  position: sticky;
+  top: 0;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.logo {
+/* ================= LOGO ================= */
+
+.logo{
   font-size: 28px;
+  font-weight: 600;
+  color: #2563eb;
+  cursor: pointer;
 }
 
-.nav-links {
+/* ================= NAV LINKS ================= */
+
+.nav-links{
   display: flex;
   list-style: none;
   gap: 25px;
 }
 
-.nav-links a {
+.nav-links a{
   text-decoration: none;
+  color: #334155;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  padding: 8px 14px;
+  border-radius: 8px;
+
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover{
+  background: #2563eb;
   color: white;
-  font-size: 18px;
-  transition: 0.3s;
 }
 
-.nav-links a:hover {
-  color: yellow;
-}
+/* ================= PAGE ================= */
 
-.page {
-  padding: 50px;
+.page{
+  padding: 80px 20px;
   text-align: center;
+}
+
+.page h1{
+  font-size: 48px;
+  margin-bottom: 15px;
+  color: #0f172a;
+}
+
+.page p{
+  font-size: 18px;
+  color: #64748b;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 768px){
+
+  .navbar{
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .nav-links{
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .page h1{
+    font-size: 36px;
+  }
 }
